@@ -14,7 +14,7 @@ int main(int argc, char * argv[])
     auto mypub = node->create_publisher<geometry_msgs::msg::Vector3>("topic_pub2",qos_profile );
     geometry_msgs::msg::Vector3 message;    // Vector3 메시지 객체 생성
     // Vector3의 x,y,z 사용자로부터 입력 받기
-    std::cin>>message.x>>message.y>>message.y;
+    std::cin>>message.x>>message.y>>message.z;
     rclcpp::WallRate loop_rate(1.0); //반복주파수를 저장하는 객체(단위 Hz)  1초에 보내고 싶은 메시지 수
     // 무한루프 -> Ctrl+c 입력 받으면 종료
     while(rclcpp::ok())
