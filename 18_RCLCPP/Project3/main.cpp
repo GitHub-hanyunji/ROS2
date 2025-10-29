@@ -1,5 +1,5 @@
 #include "rclcpp/rclcpp.hpp"        // ros2의 c++ 라이브러리
-#include "std_msgs/msg/int32.hpp"   // Int32 타입 메시지 사용
+#include "geometry_msgs/msg/twist.hpp"  // geometry_msgs 패키지의 Twist 메시지 타입
 #include <iostream>                 // 표준 입출력 라이브러리
 #include <memory>                   // 스마트 포인터를 사용하기 위한 헤더파일
 #include <chrono>                   // 시간 관련 헤더파일
