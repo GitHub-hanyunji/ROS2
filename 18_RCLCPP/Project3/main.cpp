@@ -43,6 +43,12 @@ int main(int argc, char * argv[])
             message.linear.y=0.0;
             message.angular.z=-2.0;
         }
+        // 그외의 입력에서는 거북이 안 움직임
+        else{
+            message.linear.x=0.0;
+            message.linear.y=0.0;
+            message.angular.z=0.0;
+        }
         // 로그 출력
         RCLCPP_INFO(node->get_logger(), "Publish linear: %f %f %f, angular: %f %f %f", message.linear.x,message.linear.y,message.linear.z,
                     message.angular.x,message.angular.y,message.angular.z);
