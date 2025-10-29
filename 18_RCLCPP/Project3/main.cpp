@@ -22,17 +22,25 @@ int main(int argc, char * argv[])
         // 'f' 입력시 거북이 속도 2로 앞으로 전진
         if(c=='f'){
             message.linear.x=2.0;
+            message.linear.y=0.0;
+            message.angular.z=0.0;
         }
         // 'b' 입력시 거북이 속도 2로 뒤로 후진
         else if(c=='b'){
             message.linear.x=-2.0;
+            message.linear.y=0.0;
+            message.angular.z=0.0;
         }
         // 'l' 입력시 거북이 속도 2로 좌회전
         else if(c=='l'){
+            message.linear.x=0.0;
+            message.linear.y=0.0;
             message.angular.z=2.0;
         }
         // 'r' 입력시 거북이 속도 2로 우회전
         else if(c=='r'){
+            message.linear.x=0.0;
+            message.linear.y=0.0;
             message.angular.z=-2.0;
         }
         // 로그 출력
