@@ -20,10 +20,10 @@ void callback(rclcpp::Node::SharedPtr node, rclcpp::Publisher<std_msgs::msg::Int
 int main(int argc, char * argv[])
 {
     rclcpp::init(argc, argv);   // ROS2 시스템 초기화 함수
-    auto node = std::make_shared<rclcpp::Node>("node_pub1");    // 노드 객체 생성
+    auto node = std::make_shared<rclcpp::Node>("node_pub2");    // 노드 객체 생성
     auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));       // qos 객체 생성
     // publisher 생성
-    auto mypub = node->create_publisher<std_msgs::msg::Int32 >("topic_pub1",qos_profile);
+    auto mypub = node->create_publisher<std_msgs::msg::Int32 >("topic_pub2",qos_profile);
     std_msgs::msg::Int32  message;  // int32 메시지 객체 생성
     message.data = 0;   // 메시지 초기화
     // create_wall_timer 함수는 void 즉, 매개변수 없는 함수만 받을 수 있음
