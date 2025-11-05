@@ -16,14 +16,14 @@ void mysub_callback(rclcpp::Node::SharedPtr node, const std_msgs::msg::Int32::Sh
 int main(int argc, char * argv[])
 {
     rclcpp::init(argc, argv);   // ROS2 시스템 초기화 함수
-    auto node = std::make_shared<rclcpp::Node>("node_sub1");    // 노드 객체 생성
+    auto node = std::make_shared<rclcpp::Node>("node_sub2");    // 노드 객체 생성
     auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));       // qos 객체 생성
 
     // create_subscription 함수는 반환형 void, MessageT만 받을 수 있음
     // 그래서 bind 함수를 이용해 매개변수가 있는 callback 함수를 올바른 형태로 바꿔줘야함
     std::function<void(const std_msgs::msg::Int32::SharedPtr)>fn=std::bind(mysub_callback,node,
     std::placeholders::_1);
-    auto timer=node->create_subscription<std_msgs::msg::Int32>("topic_pub1",qos_profile,fn);
+    auto timer=node->create_subscription<std_msgs::msg::Int32>("topic_pub2",qos_profile,fn);
     rclcpp::spin(node);  // 프로그램 계속 실행
     rclcpp::shutdown();  // ros2 종료
     return 0;
