@@ -26,7 +26,7 @@ int main(int argc, char * argv[])
     int count=0;  // 발행할 메시지의 초기값 설정 (0부터 시작)
     // create_wall_timer 함수는 void 즉, 매개변수 없는 함수만 받을 수 있음
     // 그래서 bind 함수를 이용해 매개변수가 있는 callback 함수를 void 형태로 바꿔줘야함
-    std::function<void()>fn=std::bind(callback,node,mypub,count);
+    std::function<void()>fn=std::bind(callback,node,mypub,std::ref(count));
     auto timer=node->create_wall_timer(1s,fn);  // 1초마다 callback 함수 호출
     rclcpp::spin(node);  // 프로그램 계속 실행
     rclcpp::shutdown();  // ros2 종료
