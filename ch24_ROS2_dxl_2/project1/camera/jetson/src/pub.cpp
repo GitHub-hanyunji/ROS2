@@ -14,14 +14,14 @@ std::string src = "nvarguscamerasrc sensor-id=0 ! \
 int main(int argc, char * argv[])
 {
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<rclcpp::Node>("campub");
-    //auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)); //TCP
-    auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort(); //UDP
-    auto mypub = node->create_publisher<sensor_msgs::msg::CompressedImage>("image/compressed", qos_profile );
+    auto node = std::make_shared<rclcpp::Node>("campub_13");
+    auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)); //TCP
+    //auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort(); //UDP
+    auto mypub = node->create_publisher<sensor_msgs::msg::CompressedImage>("image/compressed_13", qos_profile );
     
     std_msgs::msg::Header hdr;
     sensor_msgs::msg::CompressedImage::SharedPtr msg;
-    rclcpp::WallRate loop_rate(40.0);
+    rclcpp::WallRate loop_rate(20.0);
 
     cv::VideoCapture cap(src, cv::CAP_GSTREAMER);
     if (!cap.isOpened()) {
