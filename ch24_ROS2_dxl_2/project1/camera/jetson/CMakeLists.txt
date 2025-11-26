@@ -1,6 +1,5 @@
-cmake_minimum_required(VERSION 3.5)
-project(camera_ros2-1)
-
+cmake_minimum_required(VERSION 3.16)
+project(camera_ros2)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
