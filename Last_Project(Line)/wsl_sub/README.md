@@ -59,7 +59,7 @@ int Findline(Mat& frame, Point& p_center, Mat& stats, Mat& centroids) {
     // 못 찾았으면 기존 중심점에 빨간 점 표시 -> 추적 실패
     else circle(frame, Point(p_center.x, p_center.y), 5, Scalar(0, 0, 255), -1);
 
-    // 가장 가까운 blob을 인라인 index로 확정
+    // 가장 가까운 blob을 추적적 index로 확정
     int idx = -1;
     double best = 999999;
     
