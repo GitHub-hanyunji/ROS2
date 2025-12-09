@@ -23,6 +23,6 @@ private:
 
 // 함수
 void Set(cv::Mat& frame);   //roi 설정
-int findline(cv::Mat& frame, cv::Point& p_center, cv::Mat& stats, cv::Mat& centroids); // 라인추적함수
+int Findline(cv::Mat& frame, cv::Point& p_center, cv::Mat& stats, cv::Mat& centroids); // 라인추적함수
 void Draw(cv::Mat& frame,cv::Mat stats,cv::Mat centroids,int labels,int index,cv::Point p_center); // 시각화함수
 #endif // LINE_DETECT_NODE_HPP
