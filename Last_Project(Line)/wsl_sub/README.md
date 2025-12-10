@@ -54,7 +54,7 @@ int Findline(Mat& frame, Point& p_center, Mat& stats, Mat& centroids) {
     // 설정한 최소 거리 내에 객체가 있는 경우
     if (min_index != -1 && min_dist <= 150) 
     {   // 중심점 갱신
-        p_center = Point(cvRound(centroids.at<double>(min_index, 0)), cvRound(centroids.at<double>(min_index, 1)));    //tmp_pt 갱신
+        p_center = Point(cvRound(centroids.at<double>(min_index, 0)), cvRound(centroids.at<double>(min_index, 1))); 
     }
     // 못 찾았으면 기존 중심점에 빨간 점 표시 -> 추적 실패
     else circle(frame, Point(p_center.x, p_center.y), 5, Scalar(0, 0, 255), -1);
