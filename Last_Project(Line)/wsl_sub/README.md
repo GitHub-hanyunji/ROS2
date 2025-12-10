@@ -1,4 +1,4 @@
-## Wsl Pub
+## Wsl Sub
 ### 작성자: 2301510 한윤지
 
 Jetson에서 Publish한 메시지를 Mat으로 변환하여 영상 프레임에서 라인을 찾고 오류(error)를 계산하는 노드이다.
