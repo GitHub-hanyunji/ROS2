@@ -9,7 +9,7 @@ https://github.com/GitHub-hanyunji/ROS2/blob/main/Last_Project(Line)/jeston_pub/
 ### sub 설명
 https://github.com/GitHub-hanyunji/ROS2/blob/main/Last_Project(Line)/wsl_sub/README.md
 
-### youtube
+### 결과영상 youtube
 
 #### 5 lt cw 100rpm out line tracer
 https://www.youtube.com/watch?v=TSo5tUpLH4w
