@@ -55,7 +55,7 @@ int Findline(Mat& frame, Point& p_center, Mat& stats, Mat& centroids) {
 
     // 가장 가까운 blob을 인라인 index로 확정
     int idx = -1;
-    double best = 999999;
+    double best = frame.cols;
     
     // p_center에서 가장 가까운 객체를 찾는 반복문
     for(int i = 1; i < stats.rows; i++)
