@@ -7,7 +7,7 @@ rapi5_pub 패키지로 rapi5에서 비디오 frame publish 하고 wsl_sub패키�
 https://github.com/GitHub-hanyunji/ROS2/blob/main/Last_Project(Line)/jeston_pub/README.md
 
 ### sub 설명
-https://github.com/GitHub-hanyunji/ROS2/blob/main/Last_Project(Line)/wsl_sub/README.md
+https://github.com/GitHub-hanyunji/ROS2/blob/main/Line_Simulator/wsl_sub/README.md
 
 ### 결과영상 youtube
 
