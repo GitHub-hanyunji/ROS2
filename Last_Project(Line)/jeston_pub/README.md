@@ -1,4 +1,4 @@
-## Jetson Pub
+## rapi5 Pub
 ### 작성자: 2301510 한윤지
 
 Jetson에서 영상 파일을 읽어서 ROS2 토픽(/image/compressed_13)으로 계속 퍼블리시하는 노드
