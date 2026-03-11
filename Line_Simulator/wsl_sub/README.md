@@ -182,15 +182,16 @@ void LineDetectNode::line_callback(const sensor_msgs::msg::CompressedImage::Shar
     // error < 0 => 오른쪽으로 치우침, error > 0 => 왼쪽으로 치우침
     int error = center_x - p_center.x;
     
-    //프레임 처리 시간을 초 단위로 변환
-    auto end = std::chrono::steady_clock::now();
-    float t = std::chrono::duration<float,std::milli>(end - start).count() / 1000;
-
-    RCLCPP_INFO(this->get_logger(), "err:%d time:%f", error, t);
+    
 
     cv::imshow("frame", frame);  // 원본
     cv::imshow("Track", roi);    // ROI
     cv::waitKey(1);
-}
 
+    //프레임 처리 시간을 초 단위로 변환
+    auto end = std::chrono::steady_clock::now();
+    float t = std::chrono::duration<float,std::milli>(end - start).count();
+
+    RCLCPP_INFO(this->get_logger(), "err:%d time:%fms", error, t);
+}
 ```
