@@ -11,8 +11,8 @@ https://github.com/GitHub-hanyunji/ROS2/blob/main/Line_Simulator/wsl_sub/README.
 
 ### 결과영상 youtube
 
-#### 5 lt cw 100rpm out line tracer
+#### 5 lt cw 100rpm out line detector
 https://www.youtube.com/watch?v=TSo5tUpLH4w
 
-#### 7 lt ccw 100rpm in line tracer
+#### 7 lt ccw 100rpm in line detector
 https://www.youtube.com/watch?v=4Qtjuw3VRv4
